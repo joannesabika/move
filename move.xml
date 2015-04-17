@@ -26,7 +26,46 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_stop" id="29"></block>
+                          <block type="movement_reverse" id="101">
+                            <next>
+                              <block type="robot_delay" id="112" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="119">
+                                    <field name="NUM">2000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_stutter" id="129">
+                                    <next>
+                                      <block type="robot_delay" id="131" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="145">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_forward" id="164">
+                                            <next>
+                                              <block type="robot_delay" id="166" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="173">
+                                                    <field name="NUM">500</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="movement_stop" id="29"></block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
                         </next>
                       </block>
                     </next>
